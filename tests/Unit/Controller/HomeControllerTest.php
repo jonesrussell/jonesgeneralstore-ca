@@ -24,6 +24,8 @@ final class HomeControllerTest extends TestCase
         self::assertStringContainsString('Home-made hot lunches', $html);
         self::assertStringContainsString('Beads &amp; local finds', $html);
         self::assertStringContainsString('Family owned since 1984', $html);
+        self::assertStringContainsString('gassed up.', $html);
+        self::assertStringNotContainsString('brightened up.', $html);
         self::assertStringContainsString('title="Map showing Jones General Store at 4027 Espaniel Street"', $html);
         self::assertStringContainsString('Open map &amp; get directions', $html);
         self::assertStringNotContainsString('>Staff</a>', $html);
