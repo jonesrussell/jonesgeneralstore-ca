@@ -26,7 +26,7 @@ Current facts confirmed from the JGS Facebook page on August 20, 2026:
 - hours: 9 AM–10 PM daily
 - gas station: full service and follows store hours
 - public assortment: groceries, convenience items, tobacco products, women's
-  clothing, gifts, wrapping supplies, cards, and home-made hot lunches
+  clothing, gifts, wrapping supplies, cards, cold drinks, and snacks
 - public updates and current fuel prices are posted to Facebook
 
 The Facebook page lists postal code `P0P 1P0`, while project documents use
