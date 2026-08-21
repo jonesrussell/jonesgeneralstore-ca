@@ -83,6 +83,9 @@ return [
     // Dev-only fallback account for local built-in server workflows.
     // Must remain false outside local development.
     'auth' => [
+        // Dedicated HMAC key for password-reset and verification tokens.
+        // Keep this separate from the application master and JWT secrets.
+        'token_secret' => getenv('WAASEYAA_AUTH_TOKEN_SECRET') ?: '',
         'dev_fallback_account' => filter_var(
             getenv('WAASEYAA_DEV_FALLBACK_ACCOUNT') ?: false,
             FILTER_VALIDATE_BOOLEAN,
