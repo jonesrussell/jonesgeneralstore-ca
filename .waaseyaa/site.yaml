@@ -1,0 +1,67 @@
+"application":
+  "canonical_origin":
+    "config_key": "APP_ORIGIN"
+  "id": "jones-general-store"
+  "name": "Jones General Store"
+"capabilities":
+  -
+    "configuration_authority": ".waaseyaa/site.yaml#/capabilities/governed_authoring"
+    "data_classification": "public"
+    "id": "governed_authoring"
+    "lifecycle":
+      - "create"
+      - "revise"
+      - "preview"
+      - "publish"
+      - "restore"
+    "package": "waaseyaa/page-builder"
+    "provider": "site.page_builder"
+    "public_routes": {  }
+    "state": "active"
+    "verification":
+      - "tests/Acceptance/SiteGoldenPathTest.php"
+  -
+    "configuration_authority": ".waaseyaa/site.yaml#/capabilities/published_content"
+    "data_classification": "public"
+    "id": "published_content"
+    "lifecycle":
+      - "create"
+      - "revise"
+      - "publish"
+      - "unpublish"
+      - "archive"
+    "package": "waaseyaa/listing"
+    "provider": "site.published_content"
+    "public_routes":
+      - "/{slug}"
+    "state": "active"
+    "verification":
+      - "tests/Acceptance/SiteGoldenPathTest.php"
+  -
+    "id": "subscription"
+    "reason": "No personal-information subscription is required."
+    "state": "not_needed"
+"content_types":
+  -
+    "canonical_route": "/{slug}"
+    "id": "page"
+"framework":
+  "observed_lock_sha256": "cfe461c5333a7ef521cce9eaae5bce2a1a0524d80e04ee797e5937200f16fcb3"
+  "revision_policy": "exact-lock"
+"generator_version": 1
+"personal_data_stores": {  }
+"recipes":
+  -
+    "artifact_digest": "e0fdb0f43eeb654b790ae4965e7fdb1719abf4c0c510fc8a2f20df7e11565eaa"
+    "capability": "governed_authoring"
+    "id": "governed_authoring"
+    "version": 1
+  -
+    "artifact_digest": "602bdef1b7d4cf71b7ce11d3d3f1c0c13af016fd89f02d49a32f78f55cdef93d"
+    "capability": "published_content"
+    "id": "published_content"
+    "version": 1
+"schema": "waaseyaa.site"
+"verification":
+  "command": "bin/maintenance/site-verify"
+"version": 1

@@ -1,0 +1,7 @@
+<main class="content-index" data-listing="{{ bundle }}_index">
+  <h1>{{ bundle|title }}</h1>
+  {% for item in rows %}
+    <article><a href="{{ item.canonical_url }}">{{ item.label }}</a></article>
+  {% endfor %}
+  {% include 'content/pagination.html.twig' ignore missing %}
+</main>

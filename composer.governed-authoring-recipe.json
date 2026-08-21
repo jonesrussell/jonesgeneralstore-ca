@@ -1,0 +1,1 @@
+{"extra":{"waaseyaa":{"providers":["App\\Provider\\GovernedAuthoringServiceProvider"]}},"require":{"waaseyaa/admin-surface":"^0.1","waaseyaa/page-builder":"^0.1","waaseyaa/publishing":"^0.1"}}

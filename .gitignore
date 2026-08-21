@@ -1,0 +1,8 @@
+/vendor/
+/storage/framework/
+/files/*
+!/files/.gitkeep
+*.sqlite
+*.sqlite.bak
+.env
+composer.local.json
