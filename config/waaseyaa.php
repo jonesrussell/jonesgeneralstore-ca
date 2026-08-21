@@ -15,6 +15,13 @@ return [
     // Override with APP_ENV env var. Values: local, dev, development, staging, production.
     'environment' => getenv('APP_ENV') ?: 'production',
 
+    // Canonical public authorities used by SEO and social metadata. These are
+    // deployment configuration, never inferred from request headers.
+    'seo' => [
+        'canonical_origin' => getenv('APP_ORIGIN') ?: '',
+        'facebook_url' => getenv('JGS_FACEBOOK_URL') ?: '',
+    ],
+
     // RFC 9727 API Catalog. The public route exists only when a canonical
     // HTTPS base URL and at least one installed public API contribution exist.
     // APP_URL is never inferred from the request Host header.
