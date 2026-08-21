@@ -1,1 +1,0 @@
-{"version":2,"defects":[],"times":{"App\\Tests\\Unit\\Http\\BootFailureResponderTest::production_hides_the_raw_exception_message":0,"App\\Tests\\Unit\\Http\\BootFailureResponderTest::debug_shows_the_raw_exception_message":0,"App\\Tests\\Unit\\Controller\\HomeControllerTest::it_renders_the_jones_general_store_homepage":0.018}}

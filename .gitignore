@@ -3,6 +3,10 @@
 /files/*
 !/files/.gitkeep
 *.sqlite
+*.sqlite-*
 *.sqlite.bak
+.phpunit.cache/
+/storage/*
+!/storage/.gitkeep
 .env
 composer.local.json
