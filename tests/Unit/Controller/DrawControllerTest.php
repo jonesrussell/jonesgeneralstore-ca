@@ -31,13 +31,14 @@ final class DrawControllerTest extends TestCase
             'excessive dirt or buildup', '2026-09-01T09:00:00-04:00',
             '2026-09-30T22:00:00-04:00', '2026-10-01T09:30:00-04:00',
             'Regular, diesel, premium and midgrade', 'Any fuel amount gets you one ballot',
-            'collection bin', 'reserves the right to refuse entries',
+            'collection bin',
             'assets/documents/jgs-september-draw-charlotte.pdf'] as $expected) {
             self::assertStringContainsString($expected, $html);
         }
         foreach (['DESIGN PREVIEW', 'INTERNAL REVIEW', 'DRAFT', 'noindex', 'Charlotte',
             'no-purchase option', '<form', '<!-- jgs:', '/og.png', '127.0.0.1',
-            'More details', 'finishing touches', 'jgs-september-draw.png'] as $privateOrIncorrect) {
+            'More details', 'finishing touches', 'jgs-september-draw.png',
+            'reserves the right to refuse entries', 'abusing the system'] as $privateOrIncorrect) {
             self::assertStringNotContainsString($privateOrIncorrect, $html);
         }
         self::assertSame(1, substr_count($html, '<h1 '));

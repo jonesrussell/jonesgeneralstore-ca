@@ -33,8 +33,9 @@ URL. Navigation returns to the correct homepage sections from either page.
 The page follows the campaign manager's supplied prize and entry information:
 $200 Essential Detail Package (2–3 hours), JGS basket, September 1 at 9 AM through
 September 30 at 10 PM, and October 1, 2026 at 9:30 AM on Facebook Live. Fuel-only
-ballots and the manager's abuse-refusal wording are reproduced without adding
-eligibility, alternate entry methods, entry caps, basket values or legal claims.
+ballots are described without adding eligibility, alternate entry methods,
+entry caps, basket values or legal claims. At Charlotte and Marilyn's request,
+the earlier abuse-refusal paragraph is not displayed.
 It does not collect entries or publish internal review notes. No CMS record or
 database migration is needed. The supplied PDF is published unchanged.
 
