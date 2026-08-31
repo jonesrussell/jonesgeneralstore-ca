@@ -15,9 +15,9 @@ final readonly class DrawController
     public function index(): Response
     {
         $title = 'September Draw | Jones General Store';
-        $description = 'A chance to win an interior and exterior detailing package plus a JGS gift basket. September draw information from Jones General Store in Sagamok.';
+        $description = 'Fuel up September 1–30 for a chance to win a $200 Essential Detail Package plus a JGS gift basket. Draw October 1, 2026 at 9:30 AM on Facebook Live.';
         $canonical = $this->metadata->canonicalUrl('september-draw');
-        $image = $this->metadata->canonicalUrl('assets/images/jgs-september-draw.png');
+        $image = $this->metadata->canonicalUrl('assets/images/jgs-september-draw-charlotte.png');
         $head = (new MetaTagBuilder())->buildHeadSnippet($title, $description, $canonical);
         foreach ([
             'og:type' => 'website', 'og:locale' => 'en_CA',

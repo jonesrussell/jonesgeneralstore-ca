@@ -25,12 +25,19 @@ final class DrawControllerTest extends TestCase
         $html = (string) $response->getContent();
         foreach (['class="site-header"', 'class="site-footer"', 'href="/#store"',
             'https://jonesgeneralstore.ca/september-draw', 'og:title', 'twitter:title',
-            'assets/images/jgs-september-draw.png', 'Ashton', 'October 1',
-            'does not collect entries', 'More details', 'href="#details"'] as $expected) {
+            'assets/images/jgs-september-draw-charlotte.png', 'Ashton', 'October 1',
+            'does not collect entries', 'How to enter', 'href="#details"',
+            'Essential Detail Package', '$200 value', '2–3 hours', 'No vehicle restrictions',
+            'excessive dirt or buildup', '2026-09-01T09:00:00-04:00',
+            '2026-09-30T22:00:00-04:00', '2026-10-01T09:30:00-04:00',
+            'Regular, diesel, premium and midgrade', 'Any fuel amount gets you one ballot',
+            'collection bin', 'reserves the right to refuse entries',
+            'assets/documents/jgs-september-draw-charlotte.pdf'] as $expected) {
             self::assertStringContainsString($expected, $html);
         }
         foreach (['DESIGN PREVIEW', 'INTERNAL REVIEW', 'DRAFT', 'noindex', 'Charlotte',
-            'no-purchase option', '<form', '<!-- jgs:', '/og.png', '127.0.0.1', 'fuel up and receive'] as $privateOrIncorrect) {
+            'no-purchase option', '<form', '<!-- jgs:', '/og.png', '127.0.0.1',
+            'More details', 'finishing touches', 'jgs-september-draw.png'] as $privateOrIncorrect) {
             self::assertStringNotContainsString($privateOrIncorrect, $html);
         }
         self::assertSame(1, substr_count($html, '<h1 '));

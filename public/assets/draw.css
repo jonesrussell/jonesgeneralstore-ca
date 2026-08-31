@@ -1,6 +1,7 @@
 .draw-width{width:calc(100% - clamp(44px,10vw,144px));max-width:1296px;margin-inline:auto}
 .skip-link{position:absolute;left:16px;top:-100px;z-index:20;background:#fff;padding:14px}.skip-link:focus{top:16px}
 .draw-page :focus-visible{outline:3px solid var(--blue);outline-offset:5px}
+.draw-poster figcaption a{display:inline-block;margin-top:12px;color:var(--blue-dark);text-underline-offset:4px}.draw-timezone{font-size:.8rem;color:#425a70;margin-top:14px}.draw-value{font-size:1.2rem}.draw-inclusions,.draw-entry-steps{padding-left:1.25rem;line-height:1.75}.draw-inclusions li,.draw-entry-steps li{margin-block:16px}.draw-entry-steps{color:#425a70}.draw-entry-steps strong{color:var(--navy)}
 .draw-hero{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(32px,6vw,85px);align-items:center;padding-block:40px 64px}
 .draw-hero h1{font-size:clamp(3.4rem,6vw,6.5rem);line-height:.96;margin-block:12px 26px}
 .vehicle-accent{width:100px;height:auto;margin-block:12px}.draw-intro{max-width:550px;color:#4e6073;font-size:1.15rem;line-height:1.75}.draw-intro strong{color:var(--navy)}

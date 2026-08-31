@@ -18,7 +18,9 @@ and template integration; do not silently create a second page with this slug.
 - `templates/partials/site-header.html.twig`, `site-footer.html.twig`: shared JGS shell.
 - `templates/september-draw.html.twig`: public copy, prize information, poster and contact links.
 - `public/assets/draw.css`: responsive page styles.
-- `public/assets/images/jgs-september-draw.png`: clean poster and page-specific social image.
+- `public/assets/images/jgs-september-draw-charlotte.png`: unchanged Charlotte poster rendered for the page and social image.
+- `public/assets/documents/jgs-september-draw-charlotte.pdf`: her exact revised PDF for download.
+- `public/assets/images/jgs-september-draw.png`: earlier clean proof, retained at its old URL for existing links.
 - `public/assets/images/jgs-vehicle-detailing.svg`: local vector detailing accent.
 - `tests/Unit/Controller/DrawControllerTest.php`: public copy, metadata, shell, linking and template allowlist.
 
@@ -27,10 +29,13 @@ URL. Navigation returns to the correct homepage sections from either page.
 
 ## Content boundary
 
-The page introduces the September draw, detailing certificate and JGS basket,
-with the October 1 Facebook Live plan. It says full prize and entry information
-is on the way. It does not collect entries, invent prize values or eligibility,
-or publish internal review notes. No CMS record or database migration is needed.
+The page follows the campaign manager's supplied prize and entry information:
+$200 Essential Detail Package (2–3 hours), JGS basket, September 1 at 9 AM through
+September 30 at 10 PM, and October 1, 2026 at 9:30 AM on Facebook Live. Fuel-only
+ballots and the manager's abuse-refusal wording are reproduced without adding
+eligibility, alternate entry methods, entry caps, basket values or legal claims.
+It does not collect entries or publish internal review notes. No CMS record or
+database migration is needed. The supplied PDF is published unchanged.
 
 When the remaining information is supplied, update the public template and
 poster together. After the campaign, replace the active announcement with a
