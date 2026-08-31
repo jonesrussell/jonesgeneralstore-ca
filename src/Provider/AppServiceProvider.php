@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Provider;
 
 use App\Controller\HomeController;
+use App\Controller\DrawController;
 use App\Seo\HomepageMetadataBuilder;
 use Symfony\Component\HttpFoundation\Response;
 use Waaseyaa\Foundation\Diagnostic\CleanUrlProbe;
@@ -16,6 +17,12 @@ final class AppServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
+        $this->singleton(DrawController::class, fn(): DrawController => new DrawController(
+            new HomepageMetadataBuilder(
+                origin: (string) ($this->config['seo']['canonical_origin'] ?? ''),
+                facebookUrl: (string) ($this->config['seo']['facebook_url'] ?? ''),
+            ),
+        ));
         $this->singleton(HomeController::class, fn(): HomeController => new HomeController(
             new HomepageMetadataBuilder(
                 origin: (string) ($this->config['seo']['canonical_origin'] ?? ''),
@@ -26,6 +33,15 @@ final class AppServiceProvider extends ServiceProvider
 
     public function routes(WaaseyaaRouter $router, ?\Waaseyaa\Entity\EntityTypeManager $entityTypeManager = null): void
     {
+        $router->addRoute(
+            'jgs.september_draw',
+            RouteBuilder::create('/september-draw')
+                ->controller([DrawController::class, 'index'])
+                ->allowAll()
+                ->methods('GET')
+                ->priority(20)
+                ->build(),
+        );
         $router->addRoute(
             'home',
             RouteBuilder::create('/')

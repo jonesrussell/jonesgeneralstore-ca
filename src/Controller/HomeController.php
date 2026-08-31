@@ -28,10 +28,7 @@ final class HomeController
 
     public function index(): Response
     {
-        $template = dirname(__DIR__, 2) . '/templates/home.html.twig';
-        $html = (string) file_get_contents($template);
-        $html = str_replace('<!-- jgs:seo-head -->', $this->metadata->head(), $html);
-        $html = str_replace('<!-- jgs:structured-data -->', $this->metadata->structuredData(), $html);
+        $html = (new StorefrontRenderer())->render('home', $this->metadata->head(), $this->metadata->structuredData());
 
         return new Response($html, 200, ['Content-Type' => 'text/html; charset=UTF-8']);
     }
@@ -53,6 +50,11 @@ final class HomeController
                 loc: $this->metadata->canonicalUrl(),
                 changefreq: 'weekly',
                 priority: 1.0,
+            ),
+            new SitemapUrl(
+                loc: $this->metadata->canonicalUrl('september-draw'),
+                changefreq: 'weekly',
+                priority: 0.7,
             ),
         ]);
 

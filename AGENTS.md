@@ -13,4 +13,8 @@ Before changing application behavior:
 Generated files are owned by `.waaseyaa/generated.json`. Regeneration refuses edits outside the extension region below.
 
 <!-- waaseyaa:extension:start local-guidance -->
+Public storefront pages are code-authored Waaseyaa routes, not CMS records yet.
+`/september-draw` shares the home shell via `StorefrontRenderer`; see
+`docs/public-draw-page.md` for files, content boundaries and verification.
+Keep private `drafts/` and `source/` artifacts out of deployments and public commits.
 <!-- waaseyaa:extension:end local-guidance -->
