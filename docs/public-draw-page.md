@@ -18,7 +18,8 @@ and template integration; do not silently create a second page with this slug.
 - `templates/partials/site-header.html.twig`, `site-footer.html.twig`: shared JGS shell.
 - `templates/september-draw.html.twig`: public copy, prize information, poster and contact links.
 - `public/assets/draw.css`: responsive page styles.
-- `public/assets/images/jgs-september-draw-charlotte.png`: unchanged Charlotte poster rendered for the page and social image.
+- `public/assets/images/jgs-september-draw-charlotte.png`: unchanged Charlotte poster rendered for the page.
+- `public/assets/images/jgs-september-draw-og-v1.jpg`: separate 1200×630 compressed landscape sharing card, with short prize/date copy. OG and X metadata use this versioned URL; OG declares JPEG type, dimensions, HTTPS URL and alt text. The poster/PDF remain unchanged.
 - `public/assets/documents/jgs-september-draw-charlotte.pdf`: her exact revised PDF for download.
 - `public/assets/images/jgs-september-draw.png`: earlier clean proof, retained at its old URL for existing links.
 - `public/assets/images/jgs-vehicle-detailing.svg`: local vector detailing accent.

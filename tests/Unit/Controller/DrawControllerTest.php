@@ -51,6 +51,26 @@ final class DrawControllerTest extends TestCase
         self::assertStringNotContainsString('<!-- jgs:', (string) $home->index()->getContent());
     }
 
+    public function testSharingCardIsLandscapeAndIndependentFromPoster(): void
+    {
+        $html = (string) (new DrawController($this->metadata()))->index()->getContent();
+        $url = 'https://jonesgeneralstore.ca/assets/images/jgs-september-draw-og-v1.jpg';
+        self::assertStringContainsString('<meta property="og:image" content="' . $url . '">', $html);
+        self::assertStringContainsString('<meta name="twitter:image" content="' . $url . '">', $html);
+        self::assertStringContainsString('<meta property="og:image:secure_url" content="' . $url . '">', $html);
+        self::assertStringContainsString('<meta property="og:image:type" content="image/jpeg">', $html);
+        self::assertStringContainsString('<meta property="og:image:width" content="1200">', $html);
+        self::assertStringContainsString('<meta property="og:image:height" content="630">', $html);
+        self::assertStringContainsString('src="/assets/images/jgs-september-draw-charlotte.png"', $html);
+        $path = dirname(__DIR__, 3) . '/public/assets/images/jgs-september-draw-og-v1.jpg';
+        $size = getimagesize($path);
+        self::assertIsArray($size);
+        self::assertSame(1200, $size[0]);
+        self::assertSame(630, $size[1]);
+        self::assertSame('image/jpeg', $size['mime']);
+        self::assertLessThan(200_000, filesize($path));
+    }
+
     public function testTemplatePathIsAllowlisted(): void
     {
         $this->expectException(\InvalidArgumentException::class);
